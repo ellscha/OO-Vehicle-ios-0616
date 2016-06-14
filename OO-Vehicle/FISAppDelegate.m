@@ -7,14 +7,20 @@
 //
 
 #import "FISAppDelegate.h"
+#import "FISCar.h"
+#import "FISRaceCar.h"
+#import "FISPlane.h"
+#import "FISVehicle.h"
 
 @implementation FISAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
-    // Override point for customization after application launch.
-
+    FISCar *oldMercedes = [[FISCar alloc]initWithWeight:4000 topSpeed:140];
+    oldMercedes.isAutomatic = NO;
+    
+    NSLog(@"my mercedes has a top speed of %.2f, weighs %.2f", oldMercedes.topSpeed, oldMercedes.weight);
+    
     return YES;
 }
 
